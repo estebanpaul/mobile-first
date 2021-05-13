@@ -1,6 +1,6 @@
-/*
-1.Posicionamiento --> static, absolute, relative, fixed
-2. Modelo de caja (Box model) --> margin, border, padding, content
+/* Orden
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja  --> margin, border, padding, content
 3. Tipografía --> tipos, tamaños de fuente, etc
 4. Estilos visuales --> box-shadow, border-radius, gradient, etc
 5. Otros --> reglas CSS y más */
@@ -165,9 +165,24 @@ main {
 }
 
 /* tablas */
+
+.main-tables-container {
+    display: flex;
+    gap: 30px; /* separacion de tarjetas */
+    height: 360px;
+    overflow-x: scroll; /*tipo de overflow */
+    overflow-y: hidden;
+    overscroll-behavior-x: contain; /*imita el overflow */
+    scroll-snap-type: x proximity; 
+    margin: 0 40px; /*margen del container del scroll*/
+}
+
+
+
 .main-currency-table, .main-commissions-table {
-    width: 70%;
-    min-width: 235px;
+    width: 90%;
+    scroll-snap-align: center; /*hace scroll y te lleva al centro del elementro*/
+    min-width: 288px;
     max-width: 500px;
     height: 360px;
     margin: 0 auto;
@@ -344,7 +359,7 @@ main {
 .product-detail--card {
     width: 90%;
     min-width: 288px;
-    max-width: 500px;
+    max-width: 400px;
     margin: 15px auto;
     padding: 15px;
     background-color: #282623;
@@ -393,12 +408,13 @@ main {
     
 }
 
+/* contenedor imagen background */
 .bitcoin-img-container {
     width: 100%;
     min-width: 320px;
     height: 50vh;
     background-size: cover;
-    background-image: url(https://i.postimg.cc/c4v6nQWv/bitcoinbaby2x.png);
+    background-image: url(https://i.postimg.cc/j2F51jHq/bitcoinbaby.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -458,13 +474,13 @@ main {
 
 .plans-container--slider {
     display: flex;
-    gap: 5px; /* separacion de tarjetas */
+    gap: 18px; /* separacion de tarjetas */
     height: 316px;
     overflow-x: scroll; /*tipo de overflow */
     overflow-y: hidden;
     overscroll-behavior-x: contain; /*imita el overflow */
     scroll-snap-type: x proximity; 
-    margin: 0 10px; /*margen del container del scroll*/
+    margin: 0 20px; /*margen del container del scroll*/
     
 }
 
